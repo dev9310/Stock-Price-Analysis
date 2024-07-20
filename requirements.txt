@@ -4,4 +4,4 @@ pandas==2.0.3
 plotly==5.22.0
 seaborn==0.13.2
 yfinance==0.2.33
-~treamlit==1.30.0
+streamlit==1.30.0

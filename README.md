@@ -49,7 +49,21 @@ This project is a web application for analyzing stock data using the Streamlit l
 
 Here is an example of what the application might look like:
 
-![Stock Analysis](path/to/screenshot.png)
+![Stock Analysis](screenshots/img1.png)
+
+
+![Stock Analysis](screenshots/img2.png)
+
+
+![Stock Analysis](screenshots/img3.png)
+
+
+![Stock Analysis](screenshots/img4.png)
+
+
+![Stock Analysis](screenshots/img5.png)
+
+
 
 ## Dependencies
 

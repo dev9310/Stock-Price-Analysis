@@ -20,7 +20,14 @@ This project is a web application for analyzing stock data using the Streamlit l
     cd stock-analysis-app
     ```
 
-2. Install the required packages:
+2. Create and activate a virtual environment (optional but recommended):
+
+    ```bash
+    python -m venv env
+    source env/bin/activate  # On Windows use `env\Scripts\activate`
+    ```
+
+3. Install the required packages:
 
     ```bash
     pip install -r requirements.txt
@@ -50,6 +57,7 @@ Here is an example of what the application might look like:
 - `pandas`
 - `yfinance`
 - `matplotlib`
+- `seaborn`
 
 ## File Structure
 
@@ -57,6 +65,8 @@ Here is an example of what the application might look like:
 stock-analysis-app/
 │
 ├── app.py
+├── helper.py
+├── preprocessor.py
 ├── requirements.txt
 ├── README.md
 └── screenshots/

@@ -27,7 +27,6 @@ slected_intrvals = st.sidebar.selectbox('Select Intervals', intervals)
 
 
 if selected_stock:
-    st.text(intervals[slected_intrvals])
     
     # Heading
     st.markdown(f"<h2 style='text-align: center; color: {head_color};'>{selected_stock}</h2>", unsafe_allow_html=True)

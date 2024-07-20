@@ -2,6 +2,10 @@
 
 This project is a web application for analyzing stock data using the Streamlit library in Python. The application provides features such as selecting stocks, viewing line charts, current stock information (low, high, open, close, volume), volume bar graphs, and moving averages for different intervals.
 
+## Link
+
+https://stock-price-analysis-vhawjkrpdyvzmnvdfewmht.streamlit.app/
+
 ## Features
 
 - **Select Stock**: Choose a stock ticker symbol to view its data.

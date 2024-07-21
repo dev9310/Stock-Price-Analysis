@@ -3,10 +3,11 @@ import preprocessor
 
 def get_markdown():
     return """
+<br>
 
 This tool provides a **comprehensive analysis** of various stocks. Here are some of the features you can explore:
 <br>
-<br>
+
 
 - **📊 Stock Price Analysis**: View **historical stock prices** with interactive line charts.
 
@@ -19,7 +20,6 @@ This tool provides a **comprehensive analysis** of various stocks. Here are some
 - **⏳ Customizable Intervals**: Choose different time intervals to tailor the analysis to your needs.
 
 - 🌿 Also check my [GitHub](https://github.com/bannu82)
-
 
 Select a stock from the sidebar to get started! 🚀
 """

@@ -75,7 +75,7 @@ if selected_stock:
 
     st.divider()
 
-    st.markdown(f"<h1 style='text-align: center; color: {white_color};'> Moving average</h1> " , unsafe_allow_html=True)
+    st.markdown(f"<h1 style='text-align: center; color: {white_color};'> Moving averages</h1> " , unsafe_allow_html=True)
     st.line_chart(data=data , x='Time' , y=['Close','10 Days Moving Average' ,'30 Days Moving Average','100 Days Moving Average'] , height=800,use_container_width=True , color=[pink_color , purple_color, yellow_color, blue_color])
 
         

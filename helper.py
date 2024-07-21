@@ -1,5 +1,7 @@
 import yfinance as yf
 import preprocessor
+import pandas as pd
+import numpy as np
 
 def get_markdown():
     return """
@@ -57,3 +59,4 @@ def get_stock_df(ticker):
 def get_current_data(df):
     df = df.iloc[-1]
     return df
+

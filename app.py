@@ -1,8 +1,11 @@
 import streamlit as st
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import time
 import helper
-
+import numpy as np
 
 
 head_color = '#60b5fe'
@@ -19,9 +22,11 @@ st.sidebar.title('Choose Stocks')
 
 def intro():
     st.write("# Welcome to Stock Analysis Tool 👋")
-    st.sidebar.success("Select a demo above.")
+    st.sidebar.success("Select a Stock above.")
     # Description of the website
     st.markdown(helper.get_markdown(), unsafe_allow_html=True)
+
+
 
 
 # Getting Stock list
@@ -36,6 +41,7 @@ selected_intervals = st.sidebar.selectbox('Select Intervals', intervals)
 if selected_stock == 'Select Stock':
     intro()
 elif selected_stock != 'Select Stock':
+
     st.markdown(f"<h1 style='text-align: center; color: {white_color};'>Stock Analysis</h1>", unsafe_allow_html=True)
     # Heading
     st.markdown(f"<h2 style='text-align: center; color: {head_color};'>{selected_stock}</h2>", unsafe_allow_html=True)
@@ -44,6 +50,11 @@ elif selected_stock != 'Select Stock':
     # Getting Intervals 
     if intervals[selected_intervals] != 1:
         data = data.tail(intervals[selected_intervals])
+    
+    
+    df = helper.get_data_for_plotting(data)
+    plotting_line_graph(df)
+    
 
     # Line Graph
     if data.iloc[0]['Close'] > data.iloc[-1]['Close']:

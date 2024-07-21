@@ -14,11 +14,11 @@ def get_stocks_list():
 
 def get_intervals():
     intervals = {  
-        '3 month':90,      
+        '1 year':365,
         '1 week':7,
         '1 month':30,
+        '3 month':90,      
         '6 months':180,
-        '1 year':365,
         '3 years':1095,
         'all':1
                  }

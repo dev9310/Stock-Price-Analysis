@@ -15,7 +15,7 @@ blue_color = '#0073e6'
 purple_color = '#7733ff'
 pink_color = '#ff1aff'
 
-st.set_page_config(layout='wide')
+st.set_page_config(layout='wide' ,page_title='Stock Analysis')
                    
 st.sidebar.title('Choose Stocks')
 st.markdown(f"<h1 style='text-align: center; color: {white_color};'>Stock Analysis</h1>", unsafe_allow_html=True)

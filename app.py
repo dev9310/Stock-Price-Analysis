@@ -84,7 +84,7 @@ if selected_stock:
         
 
     # st.write([random.randint(0, 5000) for _ in range(30)] for _ in range(1))
-    st.write(data.Close.tail(100).tolist())
+    # st.write(data.Close.tail(100).tolist())
     
 
     # df = pd.DataFrame(

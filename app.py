@@ -84,34 +84,34 @@ if selected_stock:
         
 
     # st.write([random.randint(0, 5000) for _ in range(30)] for _ in range(1))
-    # st.write(data.Close.tail(100).tolist())
+    st.write(data.Close.tail(100).tolist())
     
 
-    df = pd.DataFrame(
-        {
-            "name": ["Roadmap"],
-            "url": ["https://roadmap.streamlit.app"],
-            "stars": data.Close.tail(1).tolist(),
-            "views_history": [data.Close.tail(365).tolist()],
-        }
-    )
-    st.dataframe(
-        df,
-        column_config={
-            "name": "App name",
-            "stars": st.column_config.NumberColumn(
-                "Github Stars",
-                help="Number of stars on GitHub",
-                format="%f",
-            ),
-            "url": st.column_config.LinkColumn("App URL"),
-            "views_history": st.column_config.LineChartColumn(
-                "Views (past 30 days)", y_min=0, y_max=200
-            ),
-        },
-         use_container_width=True ,
-        hide_index=True,
-    )
+    # df = pd.DataFrame(
+    #     {
+    #         "name": ["Roadmap"],
+    #         "url": ["https://roadmap.streamlit.app"],
+    #         "stars": data.Close.tail(1).tolist(),
+    #         "views_history": [data.Close.tail(365).tolist()],
+    #     }
+    # )
+    # st.dataframe(
+    #     df,
+    #     column_config={
+    #         "name": "App name",
+    #         "stars": st.column_config.NumberColumn(
+    #             "Github Stars",
+    #             help="Number of stars on GitHub",
+    #             format="%f",
+    #         ),
+    #         "url": st.column_config.LinkColumn("App URL"),
+    #         "views_history": st.column_config.LineChartColumn(
+    #             "Views (past 30 days)", y_min=0, y_max=200
+    #         ),
+    #     },
+    #      use_container_width=True ,
+    #     hide_index=True,
+    # )
 
 
 

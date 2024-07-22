@@ -5,10 +5,9 @@ import numpy as np
 
 def get_markdown():
     return """
-<br>
 
 This tool provides a **comprehensive analysis** of various stocks. Here are some of the features you can explore:
-<br>
+
 
 
 - **📊 Stock Price Analysis**: View **historical stock prices** with interactive line charts.
@@ -39,24 +38,45 @@ def get_stocks_list():
 
 def get_intervals():
     intervals = {  
-        '1 year':365,
+        'all':1,
         '1 week':7,
         '1 month':30,
         '3 month':90,      
         '6 months':180,
-        '3 years':1095,
-        'all':1
+        '1 year':365,
+        '3 years':1095   
                  }
     return intervals
     
 def get_stock_df(ticker):
 
     data = yf.download(ticker)
+    data = data[['Open', 'Close' ,'High' , 'Low','Volume']]
     data = preprocessor.create_datetime(data)
+
 
     return data
 
 def get_current_data(df):
     df = df.iloc[-1]
+    return df
+
+def get_no_of_points(df , points):
+    indx = []
+    for i in range(points):
+        indx.append(int((i/points)*len(df)))
+    return np.array(indx)
+
+
+def get_data_for_ploting(data):
+
+    
+    df = pd.DataFrame({
+        "Time": np.array(data.Time),
+        "Close": np.array(data.Close)
+    })
+    if len(data) > 100:
+        df = df.iloc[get_no_of_points(df,100)]
+
     return df
 

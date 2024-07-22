@@ -55,7 +55,7 @@ def plot_animated_linegraph(data):
         perc = int(((i+1)/data_ln)*100)
         progress_bar.progress(perc)
         chart.line_chart(subset.set_index('Time'),use_container_width=True )
-        time.sleep(0.5)
+        time.sleep(0.1)
     
     progress_bar.empty()
     

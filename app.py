@@ -17,7 +17,7 @@ blue_color = '#0073e6'
 purple_color = '#7733ff'
 pink_color = '#ff1aff'
 
-st.set_page_config(layout='centered', page_title='Stock Analysis', initial_sidebar_state='expanded')
+st.set_page_config(layout='wide', page_title='Stock Analysis', initial_sidebar_state='expanded')
 st.sidebar.title('Choose Stocks')
 
 # Getting Stock list

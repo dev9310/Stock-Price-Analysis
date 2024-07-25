@@ -27,7 +27,7 @@ Select a stock from the sidebar to get started! 🚀
 
 def get_stocks_list():
     tickers = [
-    "NHPC.NS", "RELIANCE.NS", "HDFCBANK.NS", "INFY.NS", "TCS.NS", "ICICIBANK.NS",
+    "ICICIBANK.NS","NHPC.NS", "RELIANCE.NS", "HDFCBANK.NS", "INFY.NS", "TCS.NS", 
     "SBIN.NS", "HINDUNILVR.NS", "ITC.NS", "KOTAKBANK.NS", "LT.NS", "AXISBANK.NS",
     "BAJFINANCE.NS", "BHARTIARTL.NS", "MARUTI.NS", "ASIANPAINT.NS", "M&M.NS",
     "SUNPHARMA.NS", "WIPRO.NS", "HCLTECH.NS", "ULTRACEMCO.NS", "TATAMOTORS.NS",

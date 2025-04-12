@@ -69,14 +69,18 @@ def get_no_of_points(df , points):
 
 
 def get_data_for_ploting(data):
-
+    # Ensure 'Time' column exists
+    if 'Time' not in data.columns:
+        data['Time'] = data.index  # Set index as 'Time' if missing
     
+    # Convert to 1D arrays
     df = pd.DataFrame({
-        "Time": np.array(data.Time),
-        "Close": np.array(data.Close)
+        "Time": np.array(data["Time"]).flatten(),
+        "Close": np.array(data["Close"]).flatten()
     })
+
     if len(data) > 100:
-        df = df.iloc[get_no_of_points(df,100)]
+        df = df.iloc[get_no_of_points(df, 100)]
 
     return df
 

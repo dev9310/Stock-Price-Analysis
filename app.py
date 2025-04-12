@@ -107,7 +107,9 @@ elif selected_stock != 'Select Stock':
 
     # Bar Chart
     st.markdown(f"<h1 style='text-align: center; color: {white_color};'>Volume</h1>", unsafe_allow_html=True)
-    if data.iloc[0]['Volume'] > data.iloc[-1]['Volume']:
+    if data.iloc[0]['Volume'].values[0] > data.iloc[-1]['Volume'].values[0]:
+        print("*"*100)
+        print(data.columns)
         st.bar_chart(data=data, x='Time', y='Volume', use_container_width=True, color=[red_color])
     else:
         st.bar_chart(data=data, x='Time', y='Volume', use_container_width=True, color=[green_color])
